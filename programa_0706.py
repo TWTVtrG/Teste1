@@ -9,15 +9,15 @@ dfe = pd.read_csv(arquivo, sep=';')
 st.dataframe(dfe.head(3))
 
 fig, ax = plt.subplots()
-dfe.plot()
+dfe.plot(ax=ax)
 st.pyplot(fig)
 
 fig, ax = plt.subplots()
-dfe.plot(kind = 'scatter', x = 'EBITDA', y = 'Lucro operacional')
+dfe.plot(kind = 'scatter', x = 'EBITDA', y = 'Lucro operacional', ax=ax)
 st.pyplot(fig)
 
 fig, ax = plt.subplots()
-dfe["Lucro do período"].plot(kind = 'hist')
+dfe["Lucro do período"].plot(kind = 'hist', ax=ax)
 st.pyplot(fig)
 
 
